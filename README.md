@@ -7,7 +7,7 @@ A code along with Corey Schafer's [Django Tutorials](https://www.youtube.com/pla
 - The Django templating system is quite similar to Twig and Jinja2.
 - `{% url 'view_name' %}` is used to generate a url for a specific view.
 
-```djangotemplate
+```html
 <a href="{% url 'blog_home' %}">Django Blog</a>
 ```
 
@@ -15,7 +15,7 @@ A code along with Corey Schafer's [Django Tutorials](https://www.youtube.com/pla
 - This is essentially the same as `MVC`, just that the views are called templates and the controllers are called views.
 - As for static assets, the `{% static 'path/to/asset' %}` directive is used. 
 
-```djangotemplate
+```html
 {% load static %} <!-- Load the static directive before using -->
 <script src="{% static 'blog/app.js' %}"></script>
 ```
