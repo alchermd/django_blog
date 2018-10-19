@@ -1,0 +1,23 @@
+{% extends 'blog/layouts/base.djt' %}
+
+{% block title %} Home {% endblock %}
+
+{% block content %}
+    <div class="container mt-2">
+        <h1>Latest Posts</h1>
+
+        {% for post in posts %}
+            <article class="card mb-2">
+                <div class="card-header">
+                    <h2>{{ post.title }}</h2>
+                    <small>By <strong>{{ post.author }}</strong> on {{ post.created_at }}</small>
+                </div>
+                <div class="card-body">
+                    <p>{{ post.body }}</p>
+                </div>
+            </article>
+        {% empty %}
+            <h3>No posts yet.</h3>
+        {% endfor %}
+    </div>
+{% endblock %}
