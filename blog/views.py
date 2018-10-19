@@ -34,8 +34,8 @@ posts = [
 
 def home(request):
     published_posts = [post for post in posts if post.get('published')]
-    return render(request, 'blog/home.djt', {'posts': published_posts})
+    return render(request, 'blog/home.html', {'posts': published_posts})
 
 
 def about(request):
-    return render(request, 'blog/about.djt')
+    return render(request, 'blog/about.html')
